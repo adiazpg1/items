@@ -1,0 +1,54 @@
+<h3> Locales disponibles</h3>
+<ul *ngIf="data?.length > 0 ">
+  <li *ngFor="let local of data">
+    {{local.nombreLocal}}
+  </li>
+</ul>
+
+
+<hr>
+
+<div class="row">
+  <div class="col-md-12">
+    <input  [(ngModel)]="busqueda"  name="busqueda" (keyup.enter)="buscar()" class="form-control form-control-lg" type="text" placeholder="Buscar"> 
+  </div>
+
+  <h3> {{busqueda}}</h3>
+
+
+  <div *ngIf="resultadoBusqueda.length > 0"> 
+      <ul>
+        <li *ngFor="let item of resultadoBusqueda">
+          {{ item.descripcionItem + " - $" + item.precioItem + " - " + item.nombreLocal}}
+        </li>
+      </ul>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="form-group">
+      <label> Procesador </label>
+      <select (change)="busquedaEspecifica(busquedaProcesador)" name="busquedaProcesador" [(ngModel)]="busquedaProcesador">  
+        <option value="4440">I5 4440</option>
+        <option value="4460">I5 4460</option>
+        <option value="6500">I5 6500</option>
+        <option value="6600">I5 6600</option>
+        <option value="8100">I3 8100</option>
+      </select>
+    </div>
+  </div>
+
+  <hr>
+  <div>
+    RESULTADOS PROCESADORES
+    <div class="color:red;">
+      <ul>
+        <li *ngFor="let item of resultadoProcesadores">
+          {{ item.descripcionItem + " - $" + item.precioItem + " - " + item.nombreLocal}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

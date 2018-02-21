@@ -1,0 +1,742 @@
+[
+    {
+        "nombreLocal": "Compra Gamer",
+        "urlLocal": "https://compragamer.com/",
+        "productos": [
+            {
+                "categoria": "Procesador",
+                "items": [
+                    {
+                        "descripcionItem": "Intel I5 6500",
+                        "precioItem": "4500",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Intel I3 8350",
+                        "precioItem": "4670",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Intel I3 8100",
+                        "precioItem": "3090",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Intel I7 8700",
+                        "precioItem": "8500",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Intel I5 4440",
+                        "precioItem": "3500",
+                        "modelo": "1150"
+                    },
+                    {
+                        "descripcionItem": "AMD Ryzer 3 1300",
+                        "precioItem": "2800",
+                        "modelo": "AM4"
+                    },
+                    {
+                        "descripcionItem": "AMD RYZEN 5 1400",
+                        "precioItem": "3799",
+                        "modelo": "AM4"
+                    }
+                ]
+            },
+            {
+                "categoria": "Motherboard",
+                "items": [
+                    {
+                        "descripcionItem": "Mother Asrock Fatal1ty H270M",
+                        "precioItem": "3080",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Mother Asrock H110M-HDV R3.0",
+                        "precioItem": "1070",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Mother Asrock H81M-VG4",
+                        "precioItem": "690",
+                        "modelo": "1050"
+                    },
+                    {
+                        "descripcionItem": "Asrock AB350M PRO4 AM4 Ryzen",
+                        "precioItem": "1970",
+                        "modelo": "AM4"
+                    },
+                    {
+                        "descripcionItem": "AMD Gigabyte Aorus GA-AX370 GAMING K7 AM4 Ryzen",
+                        "precioItem": "5250",
+                        "modelo": "AM4"
+                    }
+                ]
+            },
+            {
+                "categoria": "RAM",
+                "items": [
+                    {
+                        "descripcionItem": "Memoria Adata DDR4 4GB 2400Mhz",
+                        "precioItem": "1190",
+                        "capacidad": "4",
+                        "modelo": "DRR4"
+                    },
+                    {
+                        "descripcionItem": "Memoria Corsair DDR3 8GB 1333Mhz Value",
+                        "precioItem": "1930",
+                        "capacidad": "8",
+                        "modelo": "DRR3"
+                    },
+                    {
+                        "descripcionItem": "Memoria Corsair DDR4 8GB 2666Mhz Vengeance LPX RED",
+                        "precioItem": "2810",
+                        "capacidad": "8",
+                        "modelo": "DRR4"
+                    },
+                    {
+                        "descripcionItem": "Memoria Crucial DDR4 16GB 2400Mhz Ballistix Sport LT WHITE",
+                        "precioItem": "4680",
+                        "capacidad": "16",
+                        "modelo": "DRR4"
+                    }
+                ]
+            },
+            {
+                "categoria": "VIDEO",
+                "items": [
+                    {
+                        "descripcionItem": "Placa de Video EVGA GT730 2GB DDR3",
+                        "precioItem": "1800",
+                        "modelo": "DDR3"
+                    },
+                    {
+                        "descripcionItem": "Placa de Video Gigabyte GT 1030 2GB SILENT Low Profile",
+                        "precioItem": "2160",
+                        "modelo": ""
+                    },
+                    {
+                        "descripcionItem": "Placa de video Zotac GTX 1050 2GB DDR5",
+                        "precioItem": "3850",
+                        "modelo": "DDR5"
+                    },
+                    {
+                        "descripcionItem": "Placa de Video Gigabyte GTX 1080 8GB G1 GAMING",
+                        "precioItem": "18490",
+                        "modelo": "DDR5"
+                    },
+                    {
+                        "descripcionItem": "Placa de Video EVGA GTX 1060 6GB GAMING ACX 2.0",
+                        "precioItem": "9500",
+                        "modelo": "DDR5"
+                    }
+                ]
+            },
+            {
+                "categoria": "FUENTE",
+                "items": [
+                    {
+                        "descripcionItem": "Fuente LNZ 650W Black Mod SX650-FS",
+                        "precioItem": "900",
+                        "poder": "650"
+                    },
+                    {
+                        "descripcionItem": "Fuente XFX 400W 80 Plus Bronze Xt Edition 30A PCIE x 2",
+                        "precioItem": "999",
+                        "poder": "400"
+                    },
+                    {
+                        "descripcionItem": "Fuente XFX 500W XT Full Wired 80+ Bronze",
+                        "precioItem": "1280",
+                        "poder": "500"
+                    },
+                    {
+                        "descripcionItem": "Fuente XFX 650W XTR Full Modular 80+ Gold",
+                        "precioItem": "2500",
+                        "poder": "650"
+                    }
+                ]
+            },
+            {
+                "categoria": "Gabinete",
+                "items": [
+                    {
+                        "descripcionItem": "Gabinete Corsair Carbide 400C Black",
+                        "precioItem": "1940"
+                    },
+                    {
+                        "descripcionItem": "Gabinete Corsair Carbide SPEC ALPHA Yellow",
+                        "precioItem": "1890"
+                    },
+                    {
+                        "descripcionItem": "Gabinete Corsair Crystal 460X RGB MT ATX",
+                        "precioItem": "3300"
+                    },
+                    {
+                        "descripcionItem": "Gabinete DeepCool Earlkase RGB",
+                        "precioItem": "1990"
+                    },
+                    {
+                        "descripcionItem": "Gabinete NZXT H440 BLACK RED",
+                        "precioItem": "2980"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "nombreLocal": "FullH4rd",
+        "urlLocal": "http://www.fullh4rd.com.ar/",
+        "productos": [
+            {
+                "categoria": "Procesador",
+                "items": [
+                    {
+                        "descripcionItem": "Intel I5 6500",
+                        "precioItem": "4300",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Intel I3 8350",
+                        "precioItem": "4700",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Intel I3 8100",
+                        "precioItem": "3100",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Intel I7 8700",
+                        "precioItem": "8000",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Intel I5 4440",
+                        "precioItem": "4000",
+                        "modelo": "1150"
+                    },
+                    {
+                        "descripcionItem": "AMD Ryzer 3 1300",
+                        "precioItem": "2950",
+                        "modelo": "AM4"
+                    },
+                    {
+                        "descripcionItem": "AMD RYZEN 5 1400",
+                        "precioItem": "3799",
+                        "modelo": "AM4"
+                    }
+                ]
+            },
+            {
+                "categoria": "Motherboard",
+                "items": [
+                    {
+                        "descripcionItem": "Mother Asrock Fatal1ty H270M",
+                        "precioItem": "3100",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Mother Asrock H110M-HDV R3.0",
+                        "precioItem": "1000",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Mother Asrock H81M-VG4",
+                        "precioItem": "730",
+                        "modelo": "1050"
+                    },
+                    {
+                        "descripcionItem": "Asrock AB350M PRO4 AM4 Ryzen",
+                        "precioItem": "2300",
+                        "modelo": "AM4"
+                    },
+                    {
+                        "descripcionItem": "AMD Gigabyte Aorus GA-AX370 GAMING K7 AM4 Ryzen",
+                        "precioItem": "500",
+                        "modelo": "AM4"
+                    }
+                ]
+            },
+            {
+                "categoria": "RAM",
+                "items": [
+                    {
+                        "descripcionItem": "Memoria Adata DDR4 4GB 2400Mhz",
+                        "precioItem": "1050",
+                        "capacidad": "4",
+                        "modelo": "DRR4"
+                    },
+                    {
+                        "descripcionItem": "Memoria Corsair DDR3 8GB 1333Mhz Value",
+                        "precioItem": "2000",
+                        "capacidad": "8",
+                        "modelo": "DRR3"
+                    },
+                    {
+                        "descripcionItem": "Memoria Corsair DDR4 8GB 2666Mhz Vengeance LPX RED",
+                        "precioItem": "2700",
+                        "capacidad": "8",
+                        "modelo": "DRR4"
+                    },
+                    {
+                        "descripcionItem": "Memoria Crucial DDR4 16GB 2400Mhz Ballistix Sport LT WHITE",
+                        "precioItem": "4500",
+                        "capacidad": "16",
+                        "modelo": "DRR4"
+                    }
+                ]
+            },
+            {
+                "categoria": "VIDEO",
+                "items": [
+                    {
+                        "descripcionItem": "Placa de Video EVGA GT730 2GB DDR3",
+                        "precioItem": "1800",
+                        "modelo": "DDR3"
+                    },
+                    {
+                        "descripcionItem": "Placa de Video Gigabyte GT 1030 2GB SILENT Low Profile",
+                        "precioItem": "2200",
+                        "modelo": ""
+                    },
+                    {
+                        "descripcionItem": "Placa de video Zotac GTX 1050 2GB DDR5",
+                        "precioItem": "3700",
+                        "modelo": "DDR5"
+                    },
+                    {
+                        "descripcionItem": "Placa de Video Gigabyte GTX 1080 8GB G1 GAMING",
+                        "precioItem": "17000",
+                        "modelo": "DDR5"
+                    },
+                    {
+                        "descripcionItem": "Placa de Video EVGA GTX 1060 6GB GAMING ACX 2.0",
+                        "precioItem": "9400",
+                        "modelo": "DDR5"
+                    }
+                ]
+            },
+            {
+                "categoria": "FUENTE",
+                "items": [
+                    {
+                        "descripcionItem": "Fuente LNZ 650W Black Mod SX650-FS",
+                        "precioItem": "920",
+                        "poder": "650"
+                    },
+                    {
+                        "descripcionItem": "Fuente XFX 400W 80 Plus Bronze Xt Edition 30A PCIE x 2",
+                        "precioItem": "910",
+                        "poder": "400"
+                    },
+                    {
+                        "descripcionItem": "Fuente XFX 500W XT Full Wired 80+ Bronze",
+                        "precioItem": "1300",
+                        "poder": "500"
+                    },
+                    {
+                        "descripcionItem": "Fuente XFX 650W XTR Full Modular 80+ Gold",
+                        "precioItem": "2000",
+                        "poder": "650"
+                    }
+                ]
+            },
+            {
+                "categoria": "Gabinete",
+                "items": [
+                    {
+                        "descripcionItem": "Gabinete Corsair Carbide 400C Black",
+                        "precioItem": "1900"
+                    },
+                    {
+                        "descripcionItem": "Gabinete Corsair Carbide SPEC ALPHA Yellow",
+                        "precioItem": "1950"
+                    },
+                    {
+                        "descripcionItem": "Gabinete Corsair Crystal 460X RGB MT ATX",
+                        "precioItem": "3100"
+                    },
+                    {
+                        "descripcionItem": "Gabinete DeepCool Earlkase RGB",
+                        "precioItem": "2050"
+                    },
+                    {
+                        "descripcionItem": "Gabinete NZXT H440 BLACK RED",
+                        "precioItem": "2700"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "nombreLocal": "XT-PC",
+        "urlLocal": "http://www.xt-pc.com.ar/",
+        "productos": [
+            {
+                "categoria": "Procesador",
+                "items": [
+                    {
+                        "descripcionItem": "Intel I5 6500",
+                        "precioItem": "4000",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Intel I3 8350",
+                        "precioItem": "4300",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Intel I3 8100",
+                        "precioItem": "3500",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Intel I7 8700",
+                        "precioItem": "7800",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Intel I5 4440",
+                        "precioItem": "3900",
+                        "modelo": "1150"
+                    },
+                    {
+                        "descripcionItem": "AMD Ryzer 3 1300",
+                        "precioItem": "2700",
+                        "modelo": "AM4"
+                    },
+                    {
+                        "descripcionItem": "AMD RYZEN 5 1400",
+                        "precioItem": "4000",
+                        "modelo": "AM4"
+                    }
+                ]
+            },
+            {
+                "categoria": "Motherboard",
+                "items": [
+                    {
+                        "descripcionItem": "Mother Asrock Fatal1ty H270M",
+                        "precioItem": "3000",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Mother Asrock H110M-HDV R3.0",
+                        "precioItem": "965",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Mother Asrock H81M-VG4",
+                        "precioItem": "720",
+                        "modelo": "1050"
+                    },
+                    {
+                        "descripcionItem": "Asrock AB350M PRO4 AM4 Ryzen",
+                        "precioItem": "2250",
+                        "modelo": "AM4"
+                    },
+                    {
+                        "descripcionItem": "AMD Gigabyte Aorus GA-AX370 GAMING K7 AM4 Ryzen",
+                        "precioItem": "500",
+                        "modelo": "AM4"
+                    }
+                ]
+            },
+            {
+                "categoria": "RAM",
+                "items": [
+                    {
+                        "descripcionItem": "Memoria Adata DDR4 4GB 2400Mhz",
+                        "precioItem": "1200",
+                        "capacidad": "4",
+                        "modelo": "DRR4"
+                    },
+                    {
+                        "descripcionItem": "Memoria Corsair DDR3 8GB 1333Mhz Value",
+                        "precioItem": "1950",
+                        "capacidad": "8",
+                        "modelo": "DRR3"
+                    },
+                    {
+                        "descripcionItem": "Memoria Corsair DDR4 8GB 2666Mhz Vengeance LPX RED",
+                        "precioItem": "2850",
+                        "capacidad": "8",
+                        "modelo": "DRR4"
+                    },
+                    {
+                        "descripcionItem": "Memoria Crucial DDR4 16GB 2400Mhz Ballistix Sport LT WHITE",
+                        "precioItem": "4450",
+                        "capacidad": "16",
+                        "modelo": "DRR4"
+                    }
+                ]
+            },
+            {
+                "categoria": "VIDEO",
+                "items": [
+                    {
+                        "descripcionItem": "Placa de Video EVGA GT730 2GB DDR3",
+                        "precioItem": "1700",
+                        "modelo": "DDR3"
+                    },
+                    {
+                        "descripcionItem": "Placa de Video Gigabyte GT 1030 2GB SILENT Low Profile",
+                        "precioItem": "2300",
+                        "modelo": ""
+                    },
+                    {
+                        "descripcionItem": "Placa de video Zotac GTX 1050 2GB DDR5",
+                        "precioItem": "3600",
+                        "modelo": "DDR5"
+                    },
+                    {
+                        "descripcionItem": "Placa de Video Gigabyte GTX 1080 8GB G1 GAMING",
+                        "precioItem": "17500",
+                        "modelo": "DDR5"
+                    },
+                    {
+                        "descripcionItem": "Placa de Video EVGA GTX 1060 6GB GAMING ACX 2.0",
+                        "precioItem": "9300",
+                        "modelo": "DDR5"
+                    }
+                ]
+            },
+            {
+                "categoria": "FUENTE",
+                "items": [
+                    {
+                        "descripcionItem": "Fuente LNZ 650W Black Mod SX650-FS",
+                        "precioItem": "850",
+                        "poder": "650"
+                    },
+                    {
+                        "descripcionItem": "Fuente XFX 400W 80 Plus Bronze Xt Edition 30A PCIE x 2",
+                        "precioItem": "850",
+                        "poder": "400"
+                    },
+                    {
+                        "descripcionItem": "Fuente XFX 500W XT Full Wired 80+ Bronze",
+                        "precioItem": "1250",
+                        "poder": "500"
+                    },
+                    {
+                        "descripcionItem": "Fuente XFX 650W XTR Full Modular 80+ Gold",
+                        "precioItem": "1700",
+                        "poder": "650"
+                    }
+                ]
+            },
+            {
+                "categoria": "Gabinete",
+                "items": [
+                    {
+                        "descripcionItem": "Gabinete Corsair Carbide 400C Black",
+                        "precioItem": "1950"
+                    },
+                    {
+                        "descripcionItem": "Gabinete Corsair Carbide SPEC ALPHA Yellow",
+                        "precioItem": "2000"
+                    },
+                    {
+                        "descripcionItem": "Gabinete Corsair Crystal 460X RGB MT ATX",
+                        "precioItem": "3000"
+                    },
+                    {
+                        "descripcionItem": "Gabinete DeepCool Earlkase RGB",
+                        "precioItem": "2000"
+                    },
+                    {
+                        "descripcionItem": "Gabinete NZXT H440 BLACK RED",
+                        "precioItem": "2500"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "nombreLocal": "Mexx",
+        "urlLocal": "http://www.mexx.com.ar/",
+        "productos": [
+            {
+                "categoria": "Procesador",
+                "items": [
+                    {
+                        "descripcionItem": "Intel I5 6500",
+                        "precioItem": "4100",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Intel I3 8350",
+                        "precioItem": "4500",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Intel I3 8100",
+                        "precioItem": "3300",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Intel I7 8700",
+                        "precioItem": "8000",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Intel I5 4440",
+                        "precioItem": "3800",
+                        "modelo": "1150"
+                    },
+                    {
+                        "descripcionItem": "AMD Ryzer 3 1300",
+                        "precioItem": "2600",
+                        "modelo": "AM4"
+                    },
+                    {
+                        "descripcionItem": "AMD RYZEN 5 1400",
+                        "precioItem": "4050",
+                        "modelo": "AM4"
+                    }
+                ]
+            },
+            {
+                "categoria": "Motherboard",
+                "items": [
+                    {
+                        "descripcionItem": "Mother Asrock Fatal1ty H270M",
+                        "precioItem": "3100",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Mother Asrock H110M-HDV R3.0",
+                        "precioItem": "1100",
+                        "modelo": "1151"
+                    },
+                    {
+                        "descripcionItem": "Mother Asrock H81M-VG4",
+                        "precioItem": "750",
+                        "modelo": "1050"
+                    },
+                    {
+                        "descripcionItem": "Asrock AB350M PRO4 AM4 Ryzen",
+                        "precioItem": "2100",
+                        "modelo": "AM4"
+                    },
+                    {
+                        "descripcionItem": "AMD Gigabyte Aorus GA-AX370 GAMING K7 AM4 Ryzen",
+                        "precioItem": "650",
+                        "modelo": "AM4"
+                    }
+                ]
+            },
+            {
+                "categoria": "RAM",
+                "items": [
+                    {
+                        "descripcionItem": "Memoria Adata DDR4 4GB 2400Mhz",
+                        "precioItem": "1000",
+                        "capacidad": "4",
+                        "modelo": "DRR4"
+                    },
+                    {
+                        "descripcionItem": "Memoria Corsair DDR3 8GB 1333Mhz Value",
+                        "precioItem": "1700",
+                        "capacidad": "8",
+                        "modelo": "DRR3"
+                    },
+                    {
+                        "descripcionItem": "Memoria Corsair DDR4 8GB 2666Mhz Vengeance LPX RED",
+                        "precioItem": "2750",
+                        "capacidad": "8",
+                        "modelo": "DRR4"
+                    },
+                    {
+                        "descripcionItem": "Memoria Crucial DDR4 16GB 2400Mhz Ballistix Sport LT WHITE",
+                        "precioItem": "4450",
+                        "capacidad": "16",
+                        "modelo": "DRR4"
+                    }
+                ]
+            },
+            {
+                "categoria": "VIDEO",
+                "items": [
+                    {
+                        "descripcionItem": "Placa de Video EVGA GT730 2GB DDR3",
+                        "precioItem": "1750",
+                        "modelo": "DDR3"
+                    },
+                    {
+                        "descripcionItem": "Placa de Video Gigabyte GT 1030 2GB SILENT Low Profile",
+                        "precioItem": "2200",
+                        "modelo": ""
+                    },
+                    {
+                        "descripcionItem": "Placa de video Zotac GTX 1050 2GB DDR5",
+                        "precioItem": "3500",
+                        "modelo": "DDR5"
+                    },
+                    {
+                        "descripcionItem": "Placa de Video Gigabyte GTX 1080 8GB G1 GAMING",
+                        "precioItem": "22000",
+                        "modelo": "DDR5"
+                    },
+                    {
+                        "descripcionItem": "Placa de Video EVGA GTX 1060 6GB GAMING ACX 2.0",
+                        "precioItem": "6800",
+                        "modelo": "DDR5"
+                    }
+                ]
+            },
+            {
+                "categoria": "FUENTE",
+                "items": [
+                    {
+                        "descripcionItem": "Fuente LNZ 650W Black Mod SX650-FS",
+                        "precioItem": "850",
+                        "poder": "650"
+                    },
+                    {
+                        "descripcionItem": "Fuente XFX 400W 80 Plus Bronze Xt Edition 30A PCIE x 2",
+                        "precioItem": "950",
+                        "poder": "400"
+                    },
+                    {
+                        "descripcionItem": "Fuente XFX 500W XT Full Wired 80+ Bronze",
+                        "precioItem": "1300",
+                        "poder": "500"
+                    },
+                    {
+                        "descripcionItem": "Fuente XFX 650W XTR Full Modular 80+ Gold",
+                        "precioItem": "1680",
+                        "poder": "650"
+                    }
+                ]
+            },
+            {
+                "categoria": "Gabinete",
+                "items": [
+                    {
+                        "descripcionItem": "Gabinete Corsair Carbide 400C Black",
+                        "precioItem": "2200"
+                    },
+                    {
+                        "descripcionItem": "Gabinete Corsair Carbide SPEC ALPHA Yellow",
+                        "precioItem": "2500"
+                    },
+                    {
+                        "descripcionItem": "Gabinete Corsair Crystal 460X RGB MT ATX",
+                        "precioItem": "2800"
+                    },
+                    {
+                        "descripcionItem": "Gabinete DeepCool Earlkase RGB",
+                        "precioItem": "2200"
+                    },
+                    {
+                        "descripcionItem": "Gabinete NZXT H440 BLACK RED",
+                        "precioItem": "2150"
+                    }
+                ]
+            }
+        ]
+    }
+]

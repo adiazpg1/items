@@ -24,6 +24,12 @@ export class HomeComponent implements OnInit {
 
   constructor(private _productosService: ProductosService) {
 
+    if (this._productosService.cargarLocalStorage() != null) {
+      this.listaCarrito = this._productosService.cargarLocalStorage();
+    }
+
+    this.precioTotalCarrito = this.calcularPrecioTotal();
+
     this._productosService.cargarData().subscribe(
       result => {
         this.data = result;
@@ -60,21 +66,36 @@ export class HomeComponent implements OnInit {
     if (item.descripcionItem != '') {
       this.listaCarrito.push(item);
       this.precioTotalCarrito = this.precioTotalCarrito + parseInt(item.precioItem);
+      this._productosService.actualizarLocalStorage(this.listaCarrito);
     }
   }
 
-  limpiarCarrito(){
+  limpiarCarrito() {
     this.listaCarrito = [];
     this.precioTotalCarrito = 0;
+    this._productosService.actualizarLocalStorage(this.listaCarrito);
   }
 
-  eliminarDelCarrito(item ,i: number){
+  eliminarDelCarrito(item, i: number) {
     this.listaCarrito.splice(i, 1);
-    this.precioTotalCarrito = this.precioTotalCarrito  -  parseInt(item.precioItem);
+    this.precioTotalCarrito = this.precioTotalCarrito - parseInt(item.precioItem);
+    this._productosService.actualizarLocalStorage(this.listaCarrito);
 
   }
 
+  actualizarLocalStorage() {
+    this._productosService.actualizarLocalStorage(this.listaCarrito);
+  }
 
-
+  calcularPrecioTotal() :number {
+    let total = 0;
+    if (this.listaCarrito.length > 0) {
+      for (let i = 0; i < this.listaCarrito.length; i++) {
+        let precio = this.listaCarrito[i];
+        total = total + parseInt(precio.precioItem);
+      }
+    }
+    return total;
+  }
 
 }

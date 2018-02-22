@@ -1,23 +1,29 @@
 <div class="row">
   <div class="col-md-4">
-      <h3> Locales disponibles</h3>
-      <ul *ngIf="data?.length > 0 ">
-        <li *ngFor="let local of data">
-          {{local.nombreLocal}}
-        </li>
-      </ul>
-      
-  </div>
-  <div class="col-md-8">
-    <h3> Informacion </h3>
-    <ul> 
-      <li *ngFor="let item of listaCarrito; let i = index">
-          {{ item.descripcionItem + " -  " + item.nombreLocal + "-  $" +item.precioItem }}
-          <button class="btn btn-danger" (click)="eliminarDelCarrito(item, i)"> <i class="far fa-trash-alt"></i></button>
+    <h3> Locales disponibles</h3>
+    <ul *ngIf="data?.length > 0 ">
+      <li *ngFor="let local of data">
+        {{local.nombreLocal}}
       </li>
     </ul>
-    <span> $ {{ precioTotalCarrito }}</span>
+
+  </div>
+  <div class="col-md-8">
+    <h3> Carrito </h3>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let item of listaCarrito; let i = index">
+        {{ item.descripcionItem + " - " + item.nombreLocal + "- $" +item.precioItem }}
+        <button class="btn btn-danger float-right" (click)="eliminarDelCarrito(item, i)">
+          <i class="far fa-trash-alt"></i>
+        </button>
+      </li>
+    </ul>
+    <p class="text-danger" *ngIf="precioTotalCarrito == 0"> Agrega productos al carrito! </p>
     <hr>
+    <span *ngIf="precioTotalCarrito > 0" class="float-right">
+      <b> ${{ precioTotalCarrito }}</b>
+    </span>
+
     <button class="btn btn-danger " (click)="limpiarCarrito()">Limpiar</button>
   </div>
 </div>
@@ -44,5 +50,5 @@
 <app-select-form [lista]="_productosService.listaMotherboard" title="Motherboard" categoria="1" (agregarCarrito)="agregarCarrito($event)"></app-select-form>
 <app-select-form [lista]="_productosService.listaMemoriaRam" title="Memoria RAM" categoria="2" (agregarCarrito)="agregarCarrito($event)"></app-select-form>
 <app-select-form [lista]="_productosService.listaPlacaVideo" title="Placa de Video" categoria="3" (agregarCarrito)="agregarCarrito($event)"></app-select-form>
-<app-select-form [lista]="_productosService.listaFuentes" title="Fuente" categoria="4"  (agregarCarrito)="agregarCarrito($event)"></app-select-form>
+<app-select-form [lista]="_productosService.listaFuentes" title="Fuente" categoria="4" (agregarCarrito)="agregarCarrito($event)"></app-select-form>
 <app-select-form [lista]="_productosService.listaGabinetes" title="Gabinete" categoria="5" (agregarCarrito)="agregarCarrito($event)"></app-select-form>

@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductosService } from './services/productos.service';
 import { FormsModule} from '@angular/forms';
 import { MenorPrecioPipe } from './pipes/menor-precio.pipe';
+import { SelectFormComponent } from './components/select-form/select-form.component';
 
 
 
@@ -20,7 +21,8 @@ import { MenorPrecioPipe } from './pipes/menor-precio.pipe';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    MenorPrecioPipe
+    MenorPrecioPipe,
+    SelectFormComponent
   ],
   imports: [
     BrowserModule,

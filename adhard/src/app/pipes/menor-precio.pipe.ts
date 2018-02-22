@@ -1,16 +1,15 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'menorPrecio'
+  name: 'menorPrecio',
+  pure: false
 })
 export class MenorPrecioPipe implements PipeTransform {
 
-  
+
 
   transform(value: any): any {
 
-
-    return value;
   }
 
 }

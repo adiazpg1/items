@@ -1,0 +1,23 @@
+<div class="row top30">
+    <div class="col-md-12">
+      <div class="form-inline my-1 mr-2">
+        <label> {{ nombreCategoria }} </label>
+        <select class="custom-select my-1 mr-2" (change)="busquedaEspecifica(busquedaProcesador)" name="busquedaProcesador" [(ngModel)]="busquedaProcesador">
+          <option value="Seleccionar todos">Seleccionar todos</option>
+          <option *ngFor="let item of listaCategoria" value="{{ item }}"> {{ item }}</option>
+        </select>
+      </div>
+      <div>
+        <ul>
+          <b *ngIf="resultadoBusqueda.length > 0"> Resultado de Procesadores</b>
+          <li *ngFor="let item of resultadoBusqueda">
+            {{ item.descripcionItem + " - $" + item.precioItem + " - " + item.nombreLocal}}
+            <button class="btn btn-sm btn-success" (click)="agregarAlCarrito(item)"> <i class="fas fa-shopping-cart"></i> </button>
+          </li>
+        </ul>
+        <div class="alert alert-succes" *ngIf="resultadoBusqueda.length == 0">
+          No hay productos disponibles.
+        </div>
+      </div>
+    </div>
+  </div>

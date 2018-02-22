@@ -17,6 +17,9 @@ export class HomeComponent implements OnInit {
   resultadoBusqueda: string[] = [];
   resultadoProcesadores: string[] = [];
 
+  listaCarrito: string[] = [];
+  precioTotalCarrito: number = 0;
+
   busquedaProcesador: string;
 
   constructor(private _productosService: ProductosService) {
@@ -28,6 +31,7 @@ export class HomeComponent implements OnInit {
       }, error => {
         console.log(error);
       });
+
 
   }
 
@@ -52,23 +56,25 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  busquedaEspecifica(query: string) {
-    this.resultadoProcesadores = [];
-    if (query === '') {
-      return;
-    } else {
-      for (let i = 0; i < Object.keys(this.data).length; i++) {
-        for (let j = 0; j < this.data[i].productos.length; j++) {
-          for (let y = 0; y < this.data[i].productos[j].items.length; y++) {
-            if (this.data[i].productos[j].items[y].descripcionItem.toLowerCase().includes(query.toLowerCase())) {
-              this.data[i].productos[j].items[y].nombreLocal = this.data[i].nombreLocal;
-              this.resultadoProcesadores.push(this.data[i].productos[j].items[y]);
-            }
-          }
-        }
-      }
+  agregarCarrito(item) {
+    if (item.descripcionItem != '') {
+      this.listaCarrito.push(item);
+      this.precioTotalCarrito = this.precioTotalCarrito + parseInt(item.precioItem);
     }
   }
+
+  limpiarCarrito(){
+    this.listaCarrito = [];
+    this.precioTotalCarrito = 0;
+  }
+
+  eliminarDelCarrito(item ,i: number){
+    this.listaCarrito.splice(i, 1);
+    this.precioTotalCarrito = this.precioTotalCarrito  -  parseInt(item.precioItem);
+
+  }
+
+
 
 
 }

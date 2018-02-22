@@ -1,54 +1,48 @@
-<h3> Locales disponibles</h3>
-<ul *ngIf="data?.length > 0 ">
-  <li *ngFor="let local of data">
-    {{local.nombreLocal}}
-  </li>
-</ul>
-
+<div class="row">
+  <div class="col-md-4">
+      <h3> Locales disponibles</h3>
+      <ul *ngIf="data?.length > 0 ">
+        <li *ngFor="let local of data">
+          {{local.nombreLocal}}
+        </li>
+      </ul>
+      
+  </div>
+  <div class="col-md-8">
+    <h3> Informacion </h3>
+    <ul> 
+      <li *ngFor="let item of listaCarrito; let i = index">
+          {{ item.descripcionItem + " -  " + item.nombreLocal + "-  $" +item.precioItem }}
+          <button class="btn btn-danger" (click)="eliminarDelCarrito(item, i)"> <i class="far fa-trash-alt"></i></button>
+      </li>
+    </ul>
+    <span> $ {{ precioTotalCarrito }}</span>
+    <hr>
+    <button class="btn btn-danger " (click)="limpiarCarrito()">Limpiar</button>
+  </div>
+</div>
 
 <hr>
 
 <div class="row">
   <div class="col-md-12">
-    <input  [(ngModel)]="busqueda"  name="busqueda" (keyup.enter)="buscar()" class="form-control form-control-lg" type="text" placeholder="Buscar"> 
+    <input [(ngModel)]="busqueda" name="busqueda" (keyup)="buscar()" class="form-control form-control-lg" type="text" placeholder="Buscar">
   </div>
 
-  <h3> {{busqueda}}</h3>
 
-
-  <div *ngIf="resultadoBusqueda.length > 0"> 
-      <ul>
-        <li *ngFor="let item of resultadoBusqueda">
-          {{ item.descripcionItem + " - $" + item.precioItem + " - " + item.nombreLocal}}
-        </li>
-      </ul>
+  <div *ngIf="resultadoBusqueda.length > 0">
+    <ul>
+      <li *ngFor="let item of resultadoBusqueda">
+        {{ item.descripcionItem + " - $" + item.precioItem + " - " + item.nombreLocal}}
+      </li>
+    </ul>
   </div>
 </div>
 
 
-<div class="row">
-  <div class="col-md-12">
-    <div class="form-group">
-      <label> Procesador </label>
-      <select (change)="busquedaEspecifica(busquedaProcesador)" name="busquedaProcesador" [(ngModel)]="busquedaProcesador">  
-        <option value="4440">I5 4440</option>
-        <option value="4460">I5 4460</option>
-        <option value="6500">I5 6500</option>
-        <option value="6600">I5 6600</option>
-        <option value="8100">I3 8100</option>
-      </select>
-    </div>
-  </div>
-
-  <hr>
-  <div>
-    RESULTADOS PROCESADORES
-    <div class="color:red;">
-      <ul>
-        <li *ngFor="let item of resultadoProcesadores">
-          {{ item.descripcionItem + " - $" + item.precioItem + " - " + item.nombreLocal}}
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+<app-select-form [lista]="_productosService.listaProcesadores" title="Procesadores" categoria="0" (agregarCarrito)="agregarCarrito($event)"></app-select-form>
+<app-select-form [lista]="_productosService.listaMotherboard" title="Motherboard" categoria="1" (agregarCarrito)="agregarCarrito($event)"></app-select-form>
+<app-select-form [lista]="_productosService.listaMemoriaRam" title="Memoria RAM" categoria="2" (agregarCarrito)="agregarCarrito($event)"></app-select-form>
+<app-select-form [lista]="_productosService.listaPlacaVideo" title="Placa de Video" categoria="3" (agregarCarrito)="agregarCarrito($event)"></app-select-form>
+<app-select-form [lista]="_productosService.listaFuentes" title="Fuente" categoria="4"  (agregarCarrito)="agregarCarrito($event)"></app-select-form>
+<app-select-form [lista]="_productosService.listaGabinetes" title="Gabinete" categoria="5" (agregarCarrito)="agregarCarrito($event)"></app-select-form>

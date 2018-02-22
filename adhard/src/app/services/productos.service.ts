@@ -13,15 +13,28 @@ export class ProductosService {
 
     resultadoProductos: Producto[] = [];
 
+    listaProcesadores: string[] = [];
+    listaMotherboard: string[] = [];
+    listaMemoriaRam: string[] = [];
+    listaPlacaVideo: string[] = [];
+    listaGabinetes: string[] = [];
+    listaFuentes: string[] = [];
+
+
   constructor(private http: HttpClient) {
-      console.log('Servicio inicializado');
+     
+      this.listaProcesadores = ['I5 6500','I3 8350','I3 8100', 'I7 8700','I5 4440','RYZEN 1300','RYZEN 1400'];
+      this.listaMotherboard = ['H270M','H110M','H81','B350','AX370'];
+      this.listaMemoriaRam = ['4GB ','8GB','16GB','32GB'];
+      this.listaPlacaVideo = ['GT 730','GT 1030','GTX 1050','GTX 1050TI','GTX 1080','GTX 1060'];
+      this.listaFuentes = ['400','450','500','550','600','650'];
+      this.listaGabinetes = ['Corsair','DeepCool','Nzxt'];
+
+      
   }
 
   cargarData() {
     return this.http.get(this.urlJson);
   }
 
-  buscarData(busqueda: string) {
-    return this.http.get(this.urlJson);
-  }
 }

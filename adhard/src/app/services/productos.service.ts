@@ -35,11 +35,11 @@ export class ProductosService {
   }
 
   actualizarLocalStorage(listaCarrito) {
-    localStorage.setItem("data", JSON.stringify(listaCarrito));
+    localStorage.setItem('data', JSON.stringify(listaCarrito));
   }
 
   cargarLocalStorage() {
-    return  JSON.parse(localStorage.getItem("data"));
+    return  JSON.parse(localStorage.getItem('data'));
   }
 
 

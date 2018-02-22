@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 import { AppComponent } from './app.component';
@@ -12,8 +12,7 @@ import { ProductosService } from './services/productos.service';
 import { FormsModule} from '@angular/forms';
 import { MenorPrecioPipe } from './pipes/menor-precio.pipe';
 import { SelectFormComponent } from './components/select-form/select-form.component';
-
-
+import { ActivoPipe } from './pipes/activo.pipe';
 
 
 @NgModule({
@@ -22,13 +21,15 @@ import { SelectFormComponent } from './components/select-form/select-form.compon
     NavbarComponent,
     HomeComponent,
     MenorPrecioPipe,
-    SelectFormComponent
+    SelectFormComponent,
+    ActivoPipe
   ],
   imports: [
     BrowserModule,
     APP_ROUTING,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [ProductosService],
   bootstrap: [AppComponent]

@@ -8,11 +8,11 @@
         </select>
       </div>
       <div>
-        <ul>
+        <ul class="list-group">
           <b *ngIf="resultadoBusqueda.length > 0"> Resultado de Procesadores</b>
-          <li *ngFor="let item of resultadoBusqueda">
-            {{ item.descripcionItem + " - $" + item.precioItem + " - " + item.nombreLocal}}
-            <button class="btn btn-sm btn-success" (click)="agregarAlCarrito(item)"> <i class="fas fa-shopping-cart"></i> </button>
+          <li class="list-group-item" *ngFor="let item of resultadoBusqueda">
+            {{ item.descripcionItem  + " - $" + item.precioItem + " - " + item.nombreLocal}}
+            <button class="btn btn-sm btn-success float-right" (click)="agregarAlCarrito(item)"> <i class="fas fa-shopping-cart"></i> </button>
           </li>
         </ul>
         <div class="alert alert-succes" *ngIf="resultadoBusqueda.length == 0">

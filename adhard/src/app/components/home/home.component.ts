@@ -18,11 +18,11 @@ export class HomeComponent implements OnInit {
   resultadoProcesadores: string[] = [];
 
   listaCarrito: string[] = [];
-  precioTotalCarrito: number = 0;
+  precioTotalCarrito = 0;
 
   busquedaProcesador: string;
 
-  constructor(private _productosService: ProductosService) {
+  constructor(public _productosService: ProductosService) {
 
     if (this._productosService.cargarLocalStorage() != null) {
       this.listaCarrito = this._productosService.cargarLocalStorage();
@@ -37,8 +37,6 @@ export class HomeComponent implements OnInit {
       }, error => {
         console.log(error);
       });
-
-
   }
 
   ngOnInit() {
@@ -50,11 +48,13 @@ export class HomeComponent implements OnInit {
       return;
     } else {
       for (let i = 0; i < Object.keys(this.data).length; i++) {
-        for (let j = 0; j < this.data[i].productos.length; j++) {
-          for (let y = 0; y < this.data[i].productos[j].items.length; y++) {
-            if (this.data[i].productos[j].items[y].descripcionItem.toLowerCase().includes(this.busqueda.toLowerCase())) {
-              this.data[i].productos[j].items[y].nombreLocal = this.data[i].nombreLocal;
-              this.resultadoBusqueda.push(this.data[i].productos[j].items[y]);
+        if (this.data[i].activo) {
+          for (let j = 0; j < this.data[i].productos.length; j++) {
+            for (let y = 0; y < this.data[i].productos[j].items.length; y++) {
+              if (this.data[i].productos[j].items[y].descripcionItem.toLowerCase().includes(this.busqueda.toLowerCase())) {
+                this.data[i].productos[j].items[y].nombreLocal = this.data[i].nombreLocal;
+                this.resultadoBusqueda.push(this.data[i].productos[j].items[y]);
+              }
             }
           }
         }
@@ -63,8 +63,9 @@ export class HomeComponent implements OnInit {
   }
 
   agregarCarrito(item) {
-    if (item.descripcionItem != '') {
+    if (item.descripcionItem !== '') {
       this.listaCarrito.push(item);
+      // tslint:disable-next-line:radix
       this.precioTotalCarrito = this.precioTotalCarrito + parseInt(item.precioItem);
       this._productosService.actualizarLocalStorage(this.listaCarrito);
     }
@@ -76,22 +77,28 @@ export class HomeComponent implements OnInit {
     this._productosService.actualizarLocalStorage(this.listaCarrito);
   }
 
-  eliminarDelCarrito(item, i: number) {
+  eliminarDelCarrito(item: Object, i: number) {
     this.listaCarrito.splice(i, 1);
     this.precioTotalCarrito = this.precioTotalCarrito - parseInt(item.precioItem);
     this._productosService.actualizarLocalStorage(this.listaCarrito);
 
   }
 
+
+  cambiarEstado(local: Object) {
+    local.activo = !local.activo;
+  }
+
   actualizarLocalStorage() {
     this._productosService.actualizarLocalStorage(this.listaCarrito);
   }
 
-  calcularPrecioTotal() :number {
+  calcularPrecioTotal(): number {
     let total = 0;
     if (this.listaCarrito.length > 0) {
       for (let i = 0; i < this.listaCarrito.length; i++) {
-        let precio = this.listaCarrito[i];
+        const precio = this.listaCarrito[i];
+        // tslint:disable-next-line:radix
         total = total + parseInt(precio.precioItem);
       }
     }

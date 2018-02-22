@@ -1,6 +1,7 @@
 [
     {
         "nombreLocal": "Compra Gamer",
+        "activo": true,
         "urlLocal": "https://compragamer.com/",
         "productos": [
             {
@@ -187,6 +188,7 @@
     {
         "nombreLocal": "FullH4rd",
         "urlLocal": "http://www.fullh4rd.com.ar/",
+        "activo": true,
         "productos": [
             {
                 "categoria": "Procesador",
@@ -372,6 +374,7 @@
     {
         "nombreLocal": "XT-PC",
         "urlLocal": "http://www.xt-pc.com.ar/",
+        "activo": true,
         "productos": [
             {
                 "categoria": "Procesador",
@@ -557,6 +560,7 @@
     {
         "nombreLocal": "Mexx",
         "urlLocal": "http://www.mexx.com.ar/",
+        "activo": true,
         "productos": [
             {
                 "categoria": "Procesador",

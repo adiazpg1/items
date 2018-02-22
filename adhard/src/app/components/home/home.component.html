@@ -1,10 +1,12 @@
 <div class="row">
   <div class="col-md-4">
     <h3> Locales disponibles</h3>
-    <ul *ngIf="data?.length > 0 ">
-      <li *ngFor="let local of data">
+    <ul class="list-group" *ngIf="data?.length > 0 ">
+      <li class="list-group-item" *ngFor="let local of data">
         {{local.nombreLocal}}
+        <input type="checkbox" [checked]="local.activo" (click)="cambiarEstado(local)">
       </li>
+
     </ul>
 
   </div>
@@ -12,7 +14,7 @@
     <h3> Carrito </h3>
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let item of listaCarrito; let i = index">
-        {{ item.descripcionItem + " - " + item.nombreLocal + "- $" +item.precioItem }}
+        {{ item.descripcionItem + " - " + item.nombreLocal + " - $" +item.precioItem }}
         <button class="btn btn-danger float-right" (click)="eliminarDelCarrito(item, i)">
           <i class="far fa-trash-alt"></i>
         </button>
@@ -24,7 +26,7 @@
       <b> ${{ precioTotalCarrito }}</b>
     </span>
 
-    <button class="btn btn-danger " (click)="limpiarCarrito()">Limpiar</button>
+    <button *ngIf="listaCarrito.length > 0" class="btn btn-danger " (click)="limpiarCarrito()">Limpiar</button>
   </div>
 </div>
 
@@ -34,7 +36,6 @@
   <div class="col-md-12">
     <input [(ngModel)]="busqueda" name="busqueda" (keyup)="buscar()" class="form-control form-control-lg" type="text" placeholder="Buscar">
   </div>
-
 
   <div *ngIf="resultadoBusqueda.length > 0">
     <ul>
@@ -46,9 +47,33 @@
 </div>
 
 
-<app-select-form [lista]="_productosService.listaProcesadores" title="Procesadores" categoria="0" (agregarCarrito)="agregarCarrito($event)"></app-select-form>
-<app-select-form [lista]="_productosService.listaMotherboard" title="Motherboard" categoria="1" (agregarCarrito)="agregarCarrito($event)"></app-select-form>
-<app-select-form [lista]="_productosService.listaMemoriaRam" title="Memoria RAM" categoria="2" (agregarCarrito)="agregarCarrito($event)"></app-select-form>
-<app-select-form [lista]="_productosService.listaPlacaVideo" title="Placa de Video" categoria="3" (agregarCarrito)="agregarCarrito($event)"></app-select-form>
-<app-select-form [lista]="_productosService.listaFuentes" title="Fuente" categoria="4" (agregarCarrito)="agregarCarrito($event)"></app-select-form>
-<app-select-form [lista]="_productosService.listaGabinetes" title="Gabinete" categoria="5" (agregarCarrito)="agregarCarrito($event)"></app-select-form>
+
+<!-- <div class="row top30">
+  <div class="col-md-12">
+    <button class="btn btn-alert float-left">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="btn btn-alert float-right">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+</div> -->
+
+
+
+<app-select-form [lista]="_productosService.listaProcesadores" [data]="data" title="Procesadores" categoria="0" (agregarCarrito)="agregarCarrito($event)">
+</app-select-form>
+
+<app-select-form [lista]="_productosService.listaMotherboard" [data]="data"  title="Motherboard" categoria="1" (agregarCarrito)="agregarCarrito($event)"></app-select-form>
+
+<app-select-form [lista]="_productosService.listaMemoriaRam" [data]="data" title="Memoria RAM" categoria="2" (agregarCarrito)="agregarCarrito($event)">
+</app-select-form>
+
+<app-select-form [lista]="_productosService.listaPlacaVideo" [data]="data" title="Placa de Video" categoria="3" (agregarCarrito)="agregarCarrito($event)">
+</app-select-form>
+
+<app-select-form [lista]="_productosService.listaFuentes" [data]="data" title="Fuente" categoria="4" (agregarCarrito)="agregarCarrito($event)">
+</app-select-form>
+
+<app-select-form [lista]="_productosService.listaGabinetes" [data]="data" title="Gabinete" categoria="5" (agregarCarrito)="agregarCarrito($event)">
+</app-select-form>

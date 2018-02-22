@@ -6,9 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class MenorPrecioPipe implements PipeTransform {
 
-
-
   transform(value: any): any {
+
 
   }
 

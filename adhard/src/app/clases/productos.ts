@@ -4,5 +4,6 @@ export class Producto {
     modelo?: string;
     capacidad?: string;
     poder?: string;
+    nombreLocal: string;
 }
 

@@ -13,6 +13,8 @@ import { FormsModule} from '@angular/forms';
 import { MenorPrecioPipe } from './pipes/menor-precio.pipe';
 import { SelectFormComponent } from './components/select-form/select-form.component';
 import { ActivoPipe } from './pipes/activo.pipe';
+import { ApiComponent } from './components/api/api.component';
+import { ApiService } from './services/api.service';
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import { ActivoPipe } from './pipes/activo.pipe';
     HomeComponent,
     MenorPrecioPipe,
     SelectFormComponent,
-    ActivoPipe
+    ActivoPipe,
+    ApiComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,7 @@ import { ActivoPipe } from './pipes/activo.pipe';
     FormsModule,
     NgbModule
   ],
-  providers: [ProductosService],
+  providers: [ProductosService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

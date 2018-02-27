@@ -3,6 +3,8 @@ import { ProductosService } from '../../services/productos.service';
 import { Observable } from 'rxjs/Observable';
 import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
+import { Producto } from '../../clases/productos';
+
 
 
 @Component({
@@ -14,10 +16,10 @@ export class HomeComponent implements OnInit {
 
   data: Object;
   busqueda: string;
-  resultadoBusqueda: string[] = [];
+  resultadoBusqueda: Producto[] = [];
   resultadoProcesadores: string[] = [];
 
-  listaCarrito: string[] = [];
+  listaCarrito: Producto[] = [];
   precioTotalCarrito = 0;
 
   busquedaProcesador: string;
@@ -77,7 +79,7 @@ export class HomeComponent implements OnInit {
     this._productosService.actualizarLocalStorage(this.listaCarrito);
   }
 
-  eliminarDelCarrito(item: Object, i: number) {
+  eliminarDelCarrito(item: Producto, i: number) {
     this.listaCarrito.splice(i, 1);
     this.precioTotalCarrito = this.precioTotalCarrito - parseInt(item.precioItem);
     this._productosService.actualizarLocalStorage(this.listaCarrito);
@@ -85,7 +87,7 @@ export class HomeComponent implements OnInit {
   }
 
 
-  cambiarEstado(local: Object) {
+  cambiarEstado(local) {
     local.activo = !local.activo;
   }
 

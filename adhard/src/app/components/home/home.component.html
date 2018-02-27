@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-4">
     <h3> Locales disponibles</h3>
-    <ul class="list-group" *ngIf="data?.length > 0 ">
+    <ul class="list-group" >
       <li class="list-group-item" *ngFor="let local of data">
         {{local.nombreLocal}}
         <input type="checkbox" [checked]="local.activo" (click)="cambiarEstado(local)">
@@ -14,7 +14,9 @@
     <h3> Carrito </h3>
     <ul class="list-group">
       <li class="list-group-item" *ngFor="let item of listaCarrito; let i = index">
-        {{ item.descripcionItem + " - " + item.nombreLocal + " - $" +item.precioItem }}
+        <div *ngIf="listaCarrito.length > 0">
+          {{ item.descripcionItem}} - {{item.nombreLocal}} - ${{ item.precioItem }}
+        </div>
         <button class="btn btn-danger float-right" (click)="eliminarDelCarrito(item, i)">
           <i class="far fa-trash-alt"></i>
         </button>
@@ -40,7 +42,7 @@
   <div *ngIf="resultadoBusqueda.length > 0">
     <ul>
       <li *ngFor="let item of resultadoBusqueda">
-        {{ item.descripcionItem + " - $" + item.precioItem + " - " + item.nombreLocal}}
+          {{ item.descripcionItem}} - {{item.nombreLocal}} - ${{item.precioItem }}
       </li>
     </ul>
   </div>
@@ -64,7 +66,7 @@
 <app-select-form [lista]="_productosService.listaProcesadores" [data]="data" title="Procesadores" categoria="0" (agregarCarrito)="agregarCarrito($event)">
 </app-select-form>
 
-<app-select-form [lista]="_productosService.listaMotherboard" [data]="data"  title="Motherboard" categoria="1" (agregarCarrito)="agregarCarrito($event)"></app-select-form>
+<app-select-form [lista]="_productosService.listaMotherboard" [data]="data" title="Motherboard" categoria="1" (agregarCarrito)="agregarCarrito($event)"></app-select-form>
 
 <app-select-form [lista]="_productosService.listaMemoriaRam" [data]="data" title="Memoria RAM" categoria="2" (agregarCarrito)="agregarCarrito($event)">
 </app-select-form>

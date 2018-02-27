@@ -3,7 +3,10 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 
-app.use(bodyParser);
+app.use(bodyParser.urlencoded({
+    extended: true
+  }));
+app.use(bodyParser.json());
 
 app.route('/api/cats').post((req, res) => {
     res.send(201, req.body);

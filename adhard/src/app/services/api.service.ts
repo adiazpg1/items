@@ -6,13 +6,20 @@ export interface Cat {
   name: string;
 }
 
+export interface Producto {
+  nombre: string,
+  precio: string,
+  categoria: string
+  srcImg: string;
+  link: string;
+}
 
 
 @Injectable()
 export class ApiService {
 
   // tslint:disable-next-line:no-inferrable-types
-  url: string = 'http://localhost:8000/api/cats/';
+  url: string = 'http://localhost:2525/api/cats/';
 
   constructor(private _http: HttpClient) { }
 
@@ -24,6 +31,7 @@ export class ApiService {
   getCat(name: string): Observable<Cat> {
     return this._http.get<Cat>(this.url + name);
   }
+  
 
   insertCat(cat: Cat): Observable<Cat> {
     return this._http.post<Cat>(this.url, cat);
@@ -38,6 +46,10 @@ export class ApiService {
   }
 
 
+
+  getItemsProductos() : Observable<Producto>{
+    return this._http.get<Producto>("http://localhost:8084/api/compragamer/items");
+  }
 
 
 }

@@ -1,3 +1,51 @@
 <p>
   api works!
 </p>
+
+
+{{ apiJson | json}}
+
+
+
+
+<div class="row">
+  <div class="col-md-12">
+
+    <label> Busqueda </label>
+    <input  type="text" [(ngModel)]="nombreGatito" name="nombreGato">
+    <button class="btn btn-success" (click)="buscarGato()"> Buscar </button>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-12">
+
+    <label> Crear </label>
+    <input  type="text" [(ngModel)]="nombreGatito" name="nombreGato">
+    <button class="btn btn-success" (click)="crearGato()"> Crear </button>
+  </div>
+
+
+{{ catResult }}
+
+
+
+<hr>
+
+<h1> Producots </h1>
+
+
+<div>
+ <ul>
+    <li *ngFor="let item of productos.listaItems;let i = index;">
+      {{i +  item.nombre }} 
+      <a href="{{item.link}}">Ir </a>
+    </li>
+  </ul>
+</div>
+
+
+
+
